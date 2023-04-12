@@ -1,0 +1,17 @@
+{% extends "customer/customerbase.html" %}
+{% block content %}
+{% load crispy_forms_filters %}
+
+<div class="card" style="width: 60rem;">
+  <div class="card-body">
+    <h4 class="card-title">FEEDBACK DATA</h4>
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <button type="submit" class="btn btn-primary">add</button>
+</form>
+  </div>
+</div>
+{% endblock %}
+
